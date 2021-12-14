@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  description: This is a sample server EventService.
+  version: 1.0.0
+  title: Swagger EventService
+  contact:
+    email: dmytro.kachailo@epam.com
+servers:
+  - url: http://localhost:8090/
+paths:
+  /events:
+    get:
+      responses:
+        '200':
+          description: List of Events in database
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+    post:
+      description: Create an Event
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '200':
+          description: The event has been created.
+  /events/{eventId}:
+    get:
+      parameters:
+        - in: path
+          name: eventId
+          required: true
+          schema:
+            type: integer
+            example: 5
+      responses:
+        '200':
+          description: List of Events in database.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+    delete:
+      parameters:
+        - in: path
+          name: eventId
+          required: true
+          schema:
+            type: string
+            example: "5"
+      responses:
+        '204':
+          description: Event deleted successfully.
+  /events/search/findByTitle:
+    get:
+      parameters:
+        - in: query
+          name: title
+          required: true
+          schema:
+            type: string
+            example: "The Mt. Whitney Climbers Tour"
+      responses:
+        '200':
+          description: Get event by title.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Big Sure Retreat
+        place:
+          type: string
+          example: Backpack Cal
+        speaker:
+          type: string
+          example: Central Coast
+        eventType:
+          type: string
+          example: Hiking, National Parks, Big Sur
+        dateTime:
+          type: string
+          example: 2021/12/14 21:43:17
