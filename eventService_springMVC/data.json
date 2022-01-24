@@ -1,0 +1,182 @@
+[
+  {
+    "place": "Backpack Cal",
+    "title": "Big Sur Retreat",
+    "eventType": "Central Coast",
+    "speaker": "Hiking, National Parks, Big Sur"
+  },
+  {
+    "place": "Backpack Cal",
+    "title": "In the Steps of John Muir",
+    "eventType": "Northern California",
+    "speaker": "Hiking, National Parks, Yosemite, John Muir, Camping"
+  },
+  {
+    "place": "Backpack Cal",
+    "title": "The Death Valley Survivor's Trek",
+    "eventType": "Varies",
+    "speaker": "Hiking, Desert, Camping, Mojave, Death Valley"
+  },
+  {
+    "place": "Backpack Cal",
+    "title": "The Mt. Whitney Climbers Tour",
+    "eventType": "Northern California",
+    "speaker": "Hiking, Climbing, Backpacking, Mt. Whitney"
+  },
+  {
+    "place": "Backpack Cal",
+    "title": "Channel Islands Excursion",
+    "eventType": "Southern California",
+    "speaker": "Channel Islands, Boating, Whale watching, Hiking"
+  },
+  {
+    "place": "California Calm",
+    "title": "Day Spa Package",
+    "eventType": "Southern California",
+    "speaker": "Spa, Relaxation, Ojai, Art, Yoga"
+  },
+  {
+    "place": "California Calm",
+    "title": "Restoration Package",
+    "eventType": "Varies",
+    "speaker": "Spa, Relaxation, Art, Yoga"
+  },
+  {
+    "place": "California Calm",
+    "title": "Huntington Library and Pasadena Retreat Tour",
+    "eventType": "Southern California",
+    "speaker": "Spa, Relaxation, Art, Yoga"
+  },
+  {
+    "place": "California Hot springs",
+    "title": "Avila Beach Hot springs",
+    "eventType": "Central Coast",
+    "speaker": "Hot springs, hiking, cabin, beach, kayaking, hiking"
+  },
+  {
+    "place": "California Hot springs",
+    "title": "Matilija Hot springs",
+    "eventType": "Central Coast",
+    "speaker": "Hot springs, Ojai, hiking, swimming, rustic, nature"
+  },
+  {
+    "place": "California Hot springs",
+    "title": "Paso Robles Artesian Spring",
+    "eventType": "Central Coast",
+    "speaker": "Hot springs, Spa treatment, Bed and breakfast"
+  },
+  {
+    "place": "Cycle California",
+    "title": "Amgen Tour of California Special",
+    "eventType": "Northern California",
+    "speaker": "Cycling, Sports,"
+  },
+  {
+    "place": "Cycle California",
+    "title": "Monterey to Santa Barbara Tour",
+    "eventType": "Varies",
+    "speaker": "Cycling"
+  },
+  {
+    "place": "Cycle California",
+    "title": "Cycle California: My Way",
+    "eventType": "Varies",
+    "speaker": "Cycling"
+  },
+  {
+    "place": "From Desert to Sea",
+    "title": "2 Days Adrift the Salton Sea",
+    "eventType": "Southern California",
+    "speaker": "Boating, Fishing, Bird watching, Desert, Sea, Eco-Tour"
+  },
+  {
+    "place": "From Desert to Sea",
+    "title": "Mojave to Malibu",
+    "eventType": "Southern California",
+    "speaker": "Motorcycle, Cycling, Mountains, Desert, Sea"
+  },
+  {
+    "place": "From Desert to Sea",
+    "title": "Joshua Tree: Best of the West Tour",
+    "eventType": "Southern California",
+    "speaker": "Hiking, Desert, Sea, California History, Theme park"
+  },
+  {
+    "place": "Kids California",
+    "title": "Kids L.A. Tour",
+    "eventType": "Southern California",
+    "speaker": "Kid friendly, Museum,  Animals, Theme park"
+  },
+  {
+    "place": "Kids California",
+    "title": "Islands of the Blue Dolphins Tour",
+    "eventType": "Southern California",
+    "speaker": "California History, Kid friendly, Museum, Hiking, Animals"
+  },
+  {
+    "place": "Kids California",
+    "title": "Eco-Tour",
+    "eventType": "Southern California",
+    "speaker": "Boating, Farming, Animals, California History, Museum, Eco Tour"
+  },
+  {
+    "place": "Nature Watch",
+    "title": "Endangered Species Expedition",
+    "eventType": "Varies",
+    "speaker": "Eco Tour, Camping, Animals, Boating, Hiking"
+  },
+  {
+    "place": "Nature Watch",
+    "title": "Fossil Tour",
+    "eventType": "Varies",
+    "speaker": "Eco Tour, California History, Animals, Museum"
+  },
+  {
+    "place": "Nature Watch",
+    "title": "Coastal Experience",
+    "eventType": "Varies",
+    "speaker": "Eco Tour, California History, Animals, Boating, Hiking"
+  },
+  {
+    "place": "Snowboard Cali",
+    "title": "Mammoth Mountain Adventure",
+    "eventType": "Southern California",
+    "speaker": "Skiing, Snowboarding, Cabin, Hiking, Mountains"
+  },
+  {
+    "place": "Snowboard Cali",
+    "title": "Mountain High Lift-off",
+    "eventType": "Southern California",
+    "speaker": "Skiing, Snowboarding, Cabin, Hiking, Mountains"
+  },
+  {
+    "place": "Snowboard Cali",
+    "title": "Ski Lake Tahoe",
+    "eventType": "Northern California",
+    "speaker": "Skiing, Snowboarding, Cabin, Hiking, Mountains"
+  },
+  {
+    "place": "Taste of California",
+    "title": "Olive Garden Tour",
+    "eventType": "Southern California",
+    "speaker": "Tasting, Olive Oil, California History, Picnic, Nature, Farming"
+  },
+  {
+    "place": "Taste of California",
+    "title": "Oranges & Apples Tour",
+    "eventType": "Southern California",
+    "speaker": "Tasting, Olive Oil, California History, Picnic, Nature, Farming"
+  },
+  {
+    "place": "Taste of California",
+    "title": "Hot Salsa Tour",
+    "eventType": "Southern California",
+    "speaker": "Tasting, Oranges, Apples, California History, Picnic, Nature, Farming"
+  },
+  {
+    "place": "Taste of California",
+    "title": "A Week of Wine",
+    "eventType": "Napa/Sonoma Counties",
+    "speaker": "Winery, hiking, relaxing, cooking, Napa Valley"
+  }
+]
