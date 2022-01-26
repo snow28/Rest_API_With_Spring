@@ -1,9 +1,18 @@
 package com.example.ec.domain;
 
+import com.example.ec.service.EventService;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.persistence.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
+import java.util.List;
+
+import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
+import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;
 
 @Entity
 public class Event {
@@ -39,6 +48,12 @@ public class Event {
     private String getCurrentTime() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return dtf.format(LocalDateTime.now());
+    }
+
+    //reader
+    public static List<Event> read(String fileToImport) throws IOException {
+        return new ObjectMapper().setVisibility(FIELD, ANY).
+                readValue(new FileInputStream(fileToImport), new TypeReference<List<Event>>() {});
     }
 
     public Integer getId() {

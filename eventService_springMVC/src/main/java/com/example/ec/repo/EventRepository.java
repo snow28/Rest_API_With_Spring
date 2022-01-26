@@ -24,5 +24,5 @@ public interface EventRepository extends CrudRepository<Event, Integer> {
      * @param title event title
      * @return Optional of List<Event>
      */
-    Optional<List<Event>> findAllByTitle(@Param("title")String title);
+    List<Event> findAllByTitle(@Param("title")String title);
 }

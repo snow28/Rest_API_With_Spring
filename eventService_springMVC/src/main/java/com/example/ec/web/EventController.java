@@ -2,25 +2,21 @@ package com.example.ec.web;
 
 import com.example.ec.domain.Event;
 import com.example.ec.repo.EventRepository;
+import com.example.ec.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping(path = "/events")
 public class EventController {
-    private EventRepository eventRepository;
-
     @Autowired
-    public EventController(EventRepository eventRepository) {
-        this.eventRepository = eventRepository;
-    }
+    private EventService eventService;
 
     protected EventController(){}
 
@@ -30,7 +26,7 @@ public class EventController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createEvent(@RequestBody Event event) {
-        eventRepository.save(event);
+        eventService.save(event);
     }
 
     /**
@@ -40,7 +36,7 @@ public class EventController {
      */
     @GetMapping
     public List<Event> getAllEvents() {
-        return StreamSupport.stream(eventRepository.findAll().spliterator(), false).collect(Collectors.toList());
+        return eventService.getAllEvents();
     }
 
     /**
@@ -49,7 +45,7 @@ public class EventController {
     @PutMapping
     public void updateEvent(@RequestBody Event event) {
         verifyEvent(event.getId());
-        eventRepository.save(event);
+        eventService.save(event);
     }
 
     /**
@@ -60,17 +56,12 @@ public class EventController {
     @DeleteMapping(path = "/{eventId}")
     public void delete(@PathVariable(value = "eventId") int eventId) {
         Event event = verifyEvent(eventId);
-        eventRepository.delete(event);
+        eventService.delete(event);
     }
 
     @GetMapping(path = "/{title}")
     public List<Event> getAllEventsByTitle(@PathVariable(value = "title") String title) throws NoSuchElementException {
-        Optional<List<Event>> optionalEvents = eventRepository.findAllByTitle(title);
-        if (optionalEvents.isPresent()) {
-            return optionalEvents.get();
-        } else {
-            throw new NoSuchElementException();
-        }
+        return eventService.getAllEventsByTitle(title);
     }
 
     /**
@@ -87,6 +78,6 @@ public class EventController {
     }
 
     private Event verifyEvent(Integer id) throws NoSuchElementException {
-        return eventRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Event with id=" + id + " not found."));
+        return eventService.verifyEvent(id);
     }
 }
