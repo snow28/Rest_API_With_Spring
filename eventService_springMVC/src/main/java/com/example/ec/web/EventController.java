@@ -44,7 +44,7 @@ public class EventController {
      */
     @PutMapping
     public void updateEvent(@RequestBody Event event) {
-        verifyEvent(event.getId());
+        eventService.verifyEvent(event.getId());
         eventService.save(event);
     }
 
@@ -55,7 +55,7 @@ public class EventController {
      */
     @DeleteMapping(path = "/{eventId}")
     public void delete(@PathVariable(value = "eventId") int eventId) {
-        Event event = verifyEvent(eventId);
+        Event event = eventService.verifyEvent(eventId);
         eventService.delete(event);
     }
 
@@ -75,9 +75,5 @@ public class EventController {
     public String return400(NoSuchElementException ex) {
         return ex.getMessage();
 
-    }
-
-    private Event verifyEvent(Integer id) throws NoSuchElementException {
-        return eventService.verifyEvent(id);
     }
 }
